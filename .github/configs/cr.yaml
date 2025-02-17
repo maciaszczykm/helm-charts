@@ -1,0 +1,4 @@
+index-path: "./index.yaml"
+release-name-template: "{{ .Name }}-chart-v{{ .Version }}"
+generate-release-notes: true
+skip-existing: true
