@@ -10,15 +10,18 @@ kind: Certificate
 metadata:
   name: {{ include "network-observability-operator.fullname" . }}-ca
 spec:
-  isCA: true
-  commonName: {{ include "network-observability-operator.fullname" . }}-ca
-  subject:
-    organizations:
-      - Plural
+{{/*  isCA: true*/}}
+{{/*  commonName: {{ include "network-observability-operator.fullname" . }}-ca*/}}
+{{/*  subject:*/}}
+{{/*    organizations:*/}}
+{{/*      - Plural*/}}
   secretName: webhook-server-cert
-  privateKey:
-    algorithm: ECDSA
-    size: 256
+  dnsNames:
+    - netobserv-webhook-service.{{ .Release.Namespace }}.svc
+    - netobserv-webhook-service.{{ .Release.Namespace }}.svc.cluster.local
+{{/*  privateKey:*/}}
+{{/*    algorithm: ECDSA*/}}
+{{/*    size: 256*/}}
   issuerRef:
     name: self-signed
     kind: Issuer
