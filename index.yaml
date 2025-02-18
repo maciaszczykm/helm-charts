@@ -3,6 +3,17 @@ entries:
   network-observability-operator:
   - apiVersion: v2
     appVersion: 1.8.0-community
+    created: "2025-02-18T08:48:38.796447058Z"
+    description: A Helm chart for Kubernetes that installs Network Observability Operator
+    digest: dda2d57330fdd9a43825ce559479bc7b0abf772905d7665f6656e6a96f7df9cc
+    home: https://github.com/netobserv/network-observability-operator
+    name: network-observability-operator
+    type: application
+    urls:
+    - https://github.com/maciaszczykm/helm-charts/releases/download/network-observability-operator-0.2.1/network-observability-operator-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 1.8.0-community
     created: "2025-02-17T15:28:46.302467999Z"
     description: A Helm chart for Kubernetes that installs Network Observability Operator
     digest: 1a28fec8a9a29a1c62799b0953b1d9a4ef580814ed3744e0382d3ab02436562c
@@ -12,4 +23,4 @@ entries:
     urls:
     - https://github.com/maciaszczykm/helm-charts/releases/download/network-observability-operator-0.2.0/network-observability-operator-0.2.0.tgz
     version: 0.2.0
-generated: "2025-02-17T15:28:46.302478719Z"
+generated: "2025-02-18T08:48:38.796458079Z"
