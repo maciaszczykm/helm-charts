@@ -5,16 +5,16 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.14.0
   name: flowmetrics.flows.netobserv.io
 spec:
-  conversion:
-    strategy: Webhook
-    webhook:
-      clientConfig:
-        service:
-          name: netobserv-webhook-service
-          namespace: {{ .Release.Namespace }}
-          path: /convert
-      conversionReviewVersions:
-        - v1
+{{/*  conversion:*/}}
+{{/*    strategy: Webhook*/}}
+{{/*    webhook:*/}}
+{{/*      clientConfig:*/}}
+{{/*        service:*/}}
+{{/*          name: netobserv-webhook-service*/}}
+{{/*          namespace: {{ .Release.Namespace }}*/}}
+{{/*          path: /convert*/}}
+{{/*      conversionReviewVersions:*/}}
+{{/*        - v1*/}}
   group: flows.netobserv.io
   names:
     kind: FlowMetric
