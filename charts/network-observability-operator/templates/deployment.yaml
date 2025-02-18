@@ -72,16 +72,16 @@ spec:
               drop:
                 - ALL
             readOnlyRootFilesystem: true
-          volumeMounts:
-            - mountPath: /tmp/k8s-webhook-server/serving-certs
-              name: cert
-              readOnly: true
+{{/*          volumeMounts:*/}}
+{{/*            - mountPath: /tmp/k8s-webhook-server/serving-certs*/}}
+{{/*              name: cert*/}}
+{{/*              readOnly: true*/}}
       securityContext:
         runAsNonRoot: true
       serviceAccountName: {{ include "network-observability-operator.serviceAccountName" . }}
       terminationGracePeriodSeconds: 10
-      volumes:
-        - name: cert
-          secret:
-            defaultMode: 420
-            secretName: webhook-server-cert
+{{/*      volumes:*/}}
+{{/*        - name: cert*/}}
+{{/*          secret:*/}}
+{{/*            defaultMode: 420*/}}
+{{/*            secretName: webhook-server-cert*/}}
